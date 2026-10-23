@@ -1,0 +1,53 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fafaf7;
+  --fg: #1a1a18;
+  --muted: #6b6b66;
+  --rule: #e3e2dc;
+  --accent: #b8860b;
+  --card: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111110;
+    --fg: #edede8;
+    --muted: #9a9a93;
+    --rule: #2a2a27;
+    --accent: #ffd60a;
+    --card: #1a1a18;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+header.site { max-width: 680px; margin: 0 auto; padding: 28px 20px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+header.site a { color: var(--fg); text-decoration: none; font-weight: 600; letter-spacing: -0.01em; }
+header.site nav a { color: var(--muted); font-weight: 500; margin-left: 16px; font-size: 15px; }
+h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 8px; }
+h2 { font-size: 21px; letter-spacing: -0.01em; margin: 40px 0 8px; }
+h3 { font-size: 17px; margin: 24px 0 4px; }
+p, li { color: var(--fg); }
+.lede { font-size: 19px; color: var(--muted); margin-top: 0; }
+.meta { color: var(--muted); font-size: 15px; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 40px 0; }
+ul.apps { list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 12px; }
+ul.apps li { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 18px 20px; }
+ul.apps li a.title { font-weight: 600; color: var(--fg); text-decoration: none; font-size: 19px; }
+ul.apps li p { margin: 4px 0 10px; color: var(--muted); }
+ul.apps li nav a { font-size: 15px; margin-right: 14px; }
+footer { max-width: 680px; margin: 0 auto; padding: 0 20px 48px; color: var(--muted); font-size: 14px; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; }
+dt { color: var(--muted); }
+dd { margin: 0; }
+@media (max-width: 480px) {
+  h1 { font-size: 28px; }
+  dl { grid-template-columns: 1fr; gap: 2px; }
+  dt { margin-top: 10px; }
+}
